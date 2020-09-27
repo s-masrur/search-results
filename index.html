@@ -1,0 +1,68 @@
+<style>
+    #logo {
+        position: relative;
+        display: block;
+        top: 20px;
+        left: 17px;
+        max-width: 200;
+        max-height: 31;
+        width: auto;
+        height: auto;
+        order: 0;
+    }
+
+    #gsearch {
+        font-size: 15;
+        padding-left: 23px;
+        position: relative;
+        top: 13px;
+        left: 60px;
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 300px;
+        height: 42px;
+        width: 60%;
+        order: 1;
+    }
+
+    #gsearch:hover {
+        box-shadow: 1px 1px 8px rgb(200, 200, 200);
+    }
+
+    .topbar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+    }
+
+    .category {
+        position: relative;
+        order: 2;
+    }
+
+    a:link {
+        text-decoration: none;
+    }    
+
+    a:visited {
+        text-decoration: none;
+    }
+
+
+</style>
+
+<html>
+    <body>
+        <div class="topbar">
+            <img width="272" height="92" id="logo" src="googlelogo.png" alt="Google logo">
+            <input type="search" id="gsearch" placeholder="Search...">
+            <div class="category">
+                <div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
