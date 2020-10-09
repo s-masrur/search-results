@@ -1,46 +1,76 @@
 <style>
+    .topbar {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-bottom: 1px solid lightgray;
+        margin-top: 20px;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 125px;
+        height: 45px;
+    }
+
     #logo {
-        position: relative;
-        display: block;
-        top: 20px;
-        left: 17px;
         max-width: 200;
         max-height: 31;
         width: auto;
         height: auto;
-        order: 0;
     }
 
-    #gsearch {
+    .searchbar-container {
+        padding-left: 27px;
+        height: 45px;
+        width: 70%;
+        flex-grow: 1;
+    }
+
+    #searchbar {
+        width: 90%;
+        flex-grow: 1;
         font-size: 15;
         padding-left: 23px;
-        position: relative;
-        top: 13px;
-        left: 60px;
         background-color: white;
         border: 1px solid lightgray;
         border-radius: 300px;
         height: 42px;
-        width: 60%;
-        order: 1;
     }
 
-    #gsearch:hover {
+    #searchbar:hover {
         box-shadow: 1px 1px 8px rgb(200, 200, 200);
     }
 
-    .topbar {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-
+    .category-container {
+        margin-top: 10px;
+        padding-left: 103px;
+        height: 60px;
+        flex-grow: 1;
     }
 
-    .category {
-        position: relative;
-        order: 2;
+    ul.category {
+        font-size: 12;
+        list-style-type: none;
+    }
+
+    ul > li {
+        padding-top: 7px;
+        height: 23px;
+        width: 48px;
+        display: inline-block;
+        margin-left: 20px;
+        text-align: center;
+    }
+
+    #all {
+        border-bottom: 3px solid rgb(44, 114, 206);
     }
 
     a:link {
@@ -51,18 +81,40 @@
         text-decoration: none;
     }
 
+    .break {
+        flex-basis: 100%;
+        height: 0;
+    }
+
 
 </style>
 
 <html>
     <body>
         <div class="topbar">
-            <img width="272" height="92" id="logo" src="googlelogo.png" alt="Google logo">
-            <input type="search" id="gsearch" placeholder="Search...">
-            <div class="category">
-                <div>
-                </div>
+
+            <div class="logo-container">
+                <img width="272" height="92" id="logo" src="googlelogo.png" alt="Google logo">
             </div>
+
+            <div class="searchbar-container">
+                <input type="search" id="searchbar" placeholder="Search...">
+            </div>
+            <div class="break"></div>
+            <div class="category-container">
+                <ul class="category">
+                    <li id="all">
+                        <a href="#">All</a>
+                    </li>
+                    <li id="images">
+                        <a href="#">Images</a>
+                    </li>
+                    <li id="videos">
+                        <a href="#">Videos</a>
+                    </li>                    
+                </ul>
+            </div>
+
         </div>
     </body>
 </html>
